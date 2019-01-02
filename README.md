@@ -6,10 +6,14 @@ Auxiliary information regarding characteristics from each municipality will be o
 
 The analysis will be done in multiple steps, using several Python notebooks to focus on one analysis at a time.
 
-## SP state cities - Overview.ipynb
-
-Data was obtained from [IBGE website](https://cidades.ibge.gov.br/brasil/sp/avanhandava/pesquisa/37/30255), clicking on the export icon on the upper right corner and choosing (*"Todos os municipios da UF (CSV)*").
-
 ## TCE-SP_Scrapper.ipynb
 
 Scrapper notebook
+
+## TCE-SP_Despesas_MySQL_Upload.ipynb
+
+MySQL upload notebook
+
+## SP state cities - Overview.ipynb
+
+Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo state.
