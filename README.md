@@ -14,7 +14,7 @@ This notebook basically scrapes this TCE-SP database, generating a list of all `
 
 ## TCE-SP_Despesas_MySQL_Upload.ipynb
 
-This notebook allows the TCE-SP database to be imported into a MySQL table (which was created using the `scripts/create\_table\_despesas.sql` MySQL script). This step is important for future analyses, where only specific columns and rows can be loaded, given that the complete dataset is too large for loading on usual workstations (around 15GB of RAM per year of data).
+This notebook allows the TCE-SP database to be imported into a MySQL table (which was created using the `scripts/create_table_despesas.sql` MySQL script). This step is important for future analyses, where only specific columns and rows can be loaded, given that the complete dataset is too large for loading on usual workstations (using around 15GB of RAM per year of data).
 
 The data will be appended into `despesas` MySQL table, located inside `db_tce` MySQL database.
 
