@@ -14,10 +14,10 @@ This notebook basically scrapes this TCE-SP database, generating a list of all `
 
 ## TCE-SP_Despesas_MySQL_Upload.ipynb
 
-This notebook allows the TCE-SP database to be imported into a MySQL table (which was created using the `scripts/create\_table\_despesas.sql` MySQL script). This step is important for future analyses, where only specific columns and rows can be loaded, given that the complete dataset is too large for loading on usual workstations (around 15GB of RAM per year of data).
+This notebook allows the TCE-SP database to be imported into a MySQL table (which was created using the [`scripts/create\_table\_despesas.sql`](https://github.com/Lgcsimoes/tce_sp/blob/master/scripts/create_table_despesas.sql) MySQL script). This step is important for future analyses, where only specific columns and rows can be loaded, given that the complete dataset is too large for loading on usual workstations (around 15GB of RAM per year of data).
 
 The data will be appended into `despesas` MySQL table, located inside `db_tce` MySQL database.
 
 ## SP state cities - Overview.ipynb
 
-Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo state.
+Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo state. The data exported from IBGE website can also be found on [`db/municipios_SP_IBGE.csv`](https://github.com/Lgcsimoes/tce_sp/blob/master/db/municipios_SP_IBGE.csv)
