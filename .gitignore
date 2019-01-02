@@ -1,3 +1,6 @@
+# Untracked local folder
+not_tracked/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
