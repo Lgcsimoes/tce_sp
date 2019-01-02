@@ -20,4 +20,6 @@ The data will be appended into `despesas` MySQL table, located inside `db_tce` M
 
 ## SP state cities - Overview.ipynb
 
-Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo state. The data exported from IBGE website can also be found on [`db/municipios_SP_IBGE.csv`](https://github.com/Lgcsimoes/tce_sp/blob/master/db/municipios_SP_IBGE.csv)
+Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo state. The data exported from IBGE website can also be found on [`db/municipios_SP_IBGE.csv`](https://github.com/Lgcsimoes/tce_sp/blob/master/db/municipios_SP_IBGE.csv).
+
+![Variables correlation for IBGE database](notebooks/images/ibge_correlation.png)
