@@ -22,4 +22,12 @@ The data will be appended into `despesas` MySQL table, located inside `db_tce` M
 
 Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo state. The data exported from IBGE website can also be found on [`db/municipios_SP_IBGE.csv`](https://github.com/Lgcsimoes/tce_sp/blob/master/db/municipios_SP_IBGE.csv).
 
+The notebook presents an exploratory data analysis (EDA), visually inspecting the boxplot and correlation plots, as well as variable skewness. Boxplots are shown below, where a variable dispersion of 1-2 orders of magnitude can be found for income/spending per capita and child mortality rate, indicating a large discrepancy of such parameters between cities in São Paulo state.
+
+![Boxplots for IBGE database](notebooks/images/ibge_boxplot.png)
+
+The correlation matrix is shown below. Besides some obvious correlations between absolute income, spending and population, IDHM shows some positive correlation to economic variables and a negative correlation to child mortality rate. It is also interesting to note that cities with larger population tend to have higher IDHM.
+
 ![Variables correlation for IBGE database](notebooks/images/ibge_correlation.png)
+
+After correcting variable skewness by transforming current features from `x` to `log(1+x)`, the complete dataframe is saved to a MySQL table for future analyses.
