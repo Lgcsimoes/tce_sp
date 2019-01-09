@@ -1,7 +1,7 @@
 #SHOW DATABASES;
 USE db_tce;
 
-DROP TABLE despesas;
+#DROP TABLE despesas;
 
 CREATE TABLE `despesas` (
 	`id_despesa_detalhe` INT UNSIGNED NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE `despesas` (
     `ds_municipio` VARCHAR(40) NOT NULL,
 	`ds_orgao` VARCHAR(110) NOT NULL,
 	`nr_empenho` VARCHAR(30) NOT NULL,
-	`identificador_despesa` VARCHAR(100) NOT NULL,
+	`identificador_despesa` VARCHAR(110) NOT NULL,
 	`ds_despesa` VARCHAR(110) NOT NULL,
 	`ds_funcao_governo` VARCHAR(40) NOT NULL,
 	`ds_subfuncao_governo` VARCHAR(70) NOT NULL,
@@ -26,9 +26,11 @@ CREATE TABLE `despesas` (
 	`ds_elemento` VARCHAR(150) NOT NULL,
 	`historico_despesa` TEXT,
 	`ds_cpf_cnpj` VARCHAR(20) NOT NULL,
-	`ds_tipo_identif` VARCHAR(40) NOT NULL #,
-    #PRIMARY KEY (`id_despesa_detalhe`),
+	`ds_tipo_identif` VARCHAR(40) NOT NULL,
+    PRIMARY KEY (`id_despesa_detalhe`)
     #UNIQUE KEY `id_despesa_detalhe_db_tce_UNIQUE` (`id_despesa_detalhe`)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPRESSED KEY_BLOCK_SIZE=4;
 
 SHOW TABLES;
+
+CREATE INDEX year_city_type ON despesas(ano_exercicio, ds_municipio(20), ds_funcao_governo(5));
