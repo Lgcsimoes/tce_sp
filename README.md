@@ -31,3 +31,11 @@ The correlation matrix is shown below. Besides some obvious correlations between
 ![Variables correlation for IBGE database](notebooks/images/ibge_correlation.png)
 
 After correcting variable skewness by transforming current features from `x` to `log(1+x)`, the complete dataframe is saved to a MySQL table for future analyses.
+
+## TCE-SP_Despesas_EDA_2017.ipynb
+
+Data from TCE-SP database is analyzed in this notebook only with respect to spending values separated by city and primary category, non-dimensionalized by each city population. Similar categories were grouped in order to make the analysis easier. A boxplot analysis show that administration, education and health are the highest per capita spending categories, followed by social security, social assistance, culture and public security, in descending order. The plot also makes it clear a very large variation in spending per capita between cities.
+
+![Boxplots for reduced TCE-SP database](notebooks/images/tce_40kCities2017_boxplot.png)
+
+A clustering analysis was also performed, trying to identify groups of cities with similar spending per capita. This was made using a simple clustering method (K-means, which considers only linear boundaries for clusters) and also a more complex method (t-SNE, which transform the feature space into a 2D space, trying to maintain non-linear relationships between data points).
