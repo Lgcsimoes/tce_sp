@@ -34,7 +34,7 @@ After correcting variable skewness by transforming current features from `x` to 
 
 ## GeoJSON formatter.ipynb
 
-This *still* preliminary notebook investigates the idea of easily creating an interactive choropleth map for São Paulo State. It exemplifies how to interactively choose to show child mortality rate or IDHM values, colouring every city boundary with a color corresponding to the feature value.
+This *still* preliminary notebook investigates the idea of easily creating an interactive choropleth map for São Paulo State. It exemplifies how to interactively choose to show child mortality rate or IDHM values, colouring every city boundary with a color corresponding to the feature value. This feature will be used as an additional visualization tool for data analysis in the following steps.
 
 Due to security reasons, GitHub does not allow users to directly open JavaScript webpages from this README file. In order to open the try-out map, download [this file](https://github.com/Lgcsimoes/tce_sp/blob/master/notebooks/images/Choropleth_tryout.html) and open it manually using a web browser. The image below exemplifies this map.
 
