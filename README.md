@@ -32,6 +32,14 @@ The correlation matrix is shown below. Besides some obvious correlations between
 
 After correcting variable skewness by transforming current features from `x` to `log(1+x)`, the complete dataframe is saved to a MySQL table for future analyses.
 
+## GeoJSON formatter.ipynb
+
+This *still* preliminary notebook investigates the idea of easily creating an interactive choropleth map for São Paulo State. It exemplifies how to interactively choose to show child mortality rate or IDHM values, colouring every city boundary with a color corresponding to the feature value.
+
+Due to security reasons, GitHub does not allow users to directly open JavaScript webpages from this README file. In order to open the try-out map, download [this file](https://github.com/Lgcsimoes/tce_sp/blob/master/notebooks/images/Choropleth_tryout.html) and open it manually using a web browser. The image below exemplifies this map.
+
+![Choropleth for IBGE database](notebooks/images/Choropleth_tryout.png)
+
 ## TCE-SP_Despesas_EDA_2017.ipynb
 
 Data from TCE-SP database is analyzed in this notebook only with respect to spending values separated by city and primary category, non-dimensionalized by each city population. Similar categories were grouped in order to make the analysis easier. Only 167 cities were considered (from a total of 645 cities), excluding the São Paulo city, as well as cities with less than 40,000 inhabitants.
