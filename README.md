@@ -34,7 +34,9 @@ After correcting variable skewness by transforming current features from `x` to 
 
 ## TCE-SP_Despesas_EDA_2017.ipynb
 
-Data from TCE-SP database is analyzed in this notebook only with respect to spending values separated by city and primary category, non-dimensionalized by each city population. Similar categories were grouped in order to make the analysis easier. A boxplot analysis shows that administration, education and health are the highest per capita spending categories, followed by social security, social assistance, culture and public security, in descending order. The plot also presents a very large variation in spending per capita between cities.
+Data from TCE-SP database is analyzed in this notebook only with respect to spending values separated by city and primary category, non-dimensionalized by each city population. Similar categories were grouped in order to make the analysis easier. Only 167 cities were considered (from a total of 645 cities), excluding the São Paulo city, as well as cities with less than 40,000 inhabitants.
+
+A boxplot analysis shows that administration, education and health are the highest per capita spending categories, followed by social security, social assistance, culture and public security, in descending order. The plot also presents a very large variation in spending per capita between cities.
 
 ![Boxplots for reduced TCE-SP database](notebooks/images/tce_40kCities2017_boxplot.png)
 
@@ -44,5 +46,22 @@ A clustering analysis was also performed, trying to identify groups of cities wi
 
 ![Boxplots for reduced TCE-SP database, K-means](notebooks/images/tce_40kCities2017_kmeans_boxplot.png)
 
-- The t-SNE method has managed to group cities into four different clusters, one corresponding to highest spending cities (considering Administration, Culture, Education, Habitation, Public security and Social assistency) and another to lowest spending (considering Administration, Culture, Education, Health and Social assistency).
+- The t-SNE method has managed to group cities into four different clusters, one corresponding to highest spending cities (considering Administration, Culture, Education, Habitation, Public security and Social assistance) and another to lowest spending (considering Administration, Culture, Education, Health and Social assistance).
 
+For both clustering methods, no correlation was found between clusters and their corresponding values for socioeconomic parameters from IBGE database.
+
+## TCE-SP_Despesas_EDA_2017_AllCities.ipynb
+
+The analysis shown before was replicated, now considering a total of 514 cities, excluding São Paulo city and also a few small cities that had no child mortality information in IBGE database.
+
+Most of the conclusions are still valid, however the most impressive conclusion is drawn when analyzing the spending per capita distribution as a function of city population, for each spending category:
+
+- Spendings for administration, education and health clearly show a considerably higher spending per capita for cities smaller than 8,000 inhabitants, without resulting in a better situation on educational or health parameters from IBGE. This may indicate that very small cities are inneficient, since some administration functions do not scale very well for very low population levels, increasing the state overhead.
+
+- Spending on agriculture are inversely proportional to population. This may come from the fact that a city may be less dependant on agriculture the larger it is.
+
+- Spending on Social security is somewhat random as a function of city population, however cities with more than 100,000 inhabitants clearly show an increasing lower bound for this spending category.
+
+- Analyzing the spending per capita range, we can see that most categories span 2 to 3 orders of magnitude difference for the same category, with exception of Administration, Education, Habitation , Health and Social assistance (whose spending per capita tends to span only one order of magnitude). This shows that cities can spend 10 to 100 times more than other cities, with no clear effect on socioeconomic parameters.
+
+![Scatter plots for larger TCE-SP database, t-SNE](notebooks/images/tce_AllCities2017_tsne_per_category.png)
