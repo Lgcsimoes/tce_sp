@@ -1,6 +1,6 @@
-# Public spending data analysis - Municipalities in São Paulo state, Brazil
+# Public spending data analysis - Municipalities in São Paulo State, Brazil
 
-This is a live project of the data mining and analysis of public expenditure data from all municipalities in São Paulo state, Brazil, excluding the state capital (São Paulo city). This information is publicly available at the Data Transparency website of [São Paulo state Accounting Office (*TCE-SP, Tribunal de Contas do Estado de São Paulo*)](http://transparencia.tce.sp.gov.br/).
+This is a live project of the data mining and analysis of public expenditure data from all municipalities in São Paulo State, Brazil, excluding the state capital (São Paulo city). This information is publicly available at the Data Transparency website of [São Paulo State Accounting Office (*TCE-SP, Tribunal de Contas do Estado de São Paulo*)](http://transparencia.tce.sp.gov.br/).
 
 Auxiliary information regarding characteristics from each municipality will be obtained from [IBGE website](https://cidades.ibge.gov.br/pesquisas) (Brazilian Institute of Geography and Statistics, *Instituto Brasileiro de Geografia e Estatística*).
 
@@ -20,9 +20,9 @@ The data will be appended into `despesas` MySQL table, located inside `db_tce` M
 
 ## SP state cities - Overview.ipynb
 
-Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo state. The data exported from IBGE website can also be found on [`db/municipios_SP_IBGE.csv`](https://github.com/Lgcsimoes/tce_sp/blob/master/db/municipios_SP_IBGE.csv).
+Data was obtained from [IBGE website](https://www.ibge.gov.br/informacoes-por-cidade-e-estado?t=destaques&c=3549904), clicking on *"Exportar*" on the upper right corner and choosing *"Todos os municípios - SP*" and "*CSV*". A `.csv` file will be downloaded with information about every city from São Paulo State. The data exported from IBGE website can also be found on [`db/municipios_SP_IBGE.csv`](https://github.com/Lgcsimoes/tce_sp/blob/master/db/municipios_SP_IBGE.csv).
 
-The notebook presents an exploratory data analysis (EDA), visually inspecting the boxplot and correlation plots, as well as variable skewness. Boxplots are shown below, where a variable dispersion of 1-2 orders of magnitude can be found for income/spending per capita and child mortality rate, indicating a large discrepancy of such parameters between cities in São Paulo state.
+The notebook presents an exploratory data analysis (EDA), visually inspecting the boxplot and correlation plots, as well as variable skewness. Boxplots are shown below, where a variable dispersion of 1-2 orders of magnitude can be found for income/spending per capita and child mortality rate, indicating a large discrepancy of such parameters between cities in São Paulo State.
 
 ![Boxplots for IBGE database](notebooks/images/ibge_boxplot.png)
 
