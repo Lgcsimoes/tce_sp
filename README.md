@@ -34,8 +34,15 @@ After correcting variable skewness by transforming current features from `x` to 
 
 ## TCE-SP_Despesas_EDA_2017.ipynb
 
-Data from TCE-SP database is analyzed in this notebook only with respect to spending values separated by city and primary category, non-dimensionalized by each city population. Similar categories were grouped in order to make the analysis easier. A boxplot analysis show that administration, education and health are the highest per capita spending categories, followed by social security, social assistance, culture and public security, in descending order. The plot also makes it clear a very large variation in spending per capita between cities.
+Data from TCE-SP database is analyzed in this notebook only with respect to spending values separated by city and primary category, non-dimensionalized by each city population. Similar categories were grouped in order to make the analysis easier. A boxplot analysis shows that administration, education and health are the highest per capita spending categories, followed by social security, social assistance, culture and public security, in descending order. The plot also presents a very large variation in spending per capita between cities.
 
 ![Boxplots for reduced TCE-SP database](notebooks/images/tce_40kCities2017_boxplot.png)
 
-A clustering analysis was also performed, trying to identify groups of cities with similar spending per capita. This was made using a simple clustering method (K-means, which considers only linear boundaries for clusters) and also a more complex method (t-SNE, which transform the feature space into a 2D space, trying to maintain non-linear relationships between data points).
+A clustering analysis was also performed, trying to identify groups of cities with similar patterns of spending per capita. This was made using a simple clustering method (K-means, which considers only linear boundaries for clusters) and also a more complex method (t-SNE, which transform the multi-dimensional feature space into a 2D space, trying to maintain non-linear relationships between data points).
+
+- The K-means method has managed to group cities into two groups: one small group of 11 cities was segregated from the rest, corresponding to cities with around two times more spending per capita for most categories.
+
+![Boxplots for reduced TCE-SP database, K-means](notebooks/images/tce_40kCities2017_kmeans_boxplot.png)
+
+- The t-SNE method has managed to group cities into four different clusters, one corresponding to highest spending cities (considering Administration, Culture, Education, Habitation, Public security and Social assistency) and another to lowest spending (considering Administration, Culture, Education, Health and Social assistency).
+
