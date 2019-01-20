@@ -1,5 +1,6 @@
 # Untracked local folder
 not_tracked/
+*.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
