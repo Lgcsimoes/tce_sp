@@ -76,12 +76,12 @@ Most of the conclusions are still valid, however the most impressive conclusion 
 
 ## TCE-SP_Despesas_TimeSeries.ipynb
 
-This notebook shows a time series analysis of monthly spending, separated per categories and averaged by all cities, convering from 2008 to 2017. The values were normalized by population from 2018 and have not yet been adjusted for inflation. Some preliminary but interesting conclusions can be drawn:
+This notebook shows a time series analysis of monthly spending, separated per categories and averaged by all cities, covering from 2008 to 2017. The values were normalized by population from 2018 and have not yet been adjusted for inflation. Some preliminary but interesting conclusions can be drawn:
 
-- Categories such as Administration, Education, Health and Social Assistance present a growing tendency through the years, which may be due to inflation (however this needs to be confirmed). They also show peaks of spending at the beginning and end of each year, with a reducing tendency throughout every year.
+- Categories such as Administration, Education, Health and Social Assistance present a growing tendency through the years, which may be due to inflation (however this needs to be confirmed). They also show peaks of spending at the beginning and end of each year, with a reducing tendency from February to November.
 
-- After 2014 economical crisis, most of those categories show a reduction or even a stagnation of spending. On the other hand, Social Security spending clearly does not show this trend, steadily increasing its spending per capita.
+- After 2014 economical crisis, most of those categories show a lower increase or even a stagnation of spending levels. On the other hand, Social Security spending clearly does not show this trend, steadily increasing its spending per capita.
 
-- Agriculture, Culture, Habitation and Industry show a more erratic trend, with no significant increase in spending throughout the years. If adjusted for the inflation rate, probably these categories will show an effective reduction on spending.
+- Agriculture, Culture, Habitation and Industry show a more erratic trend, with no significant increase in spending throughout the years. If adjusted for the inflation rate, probably these categories will show an effective reduction on spending per capita.
 
 ![Time series analysis per categories](notebooks/images/tce_TimeSeries.png)
